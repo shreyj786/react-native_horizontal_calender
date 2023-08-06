@@ -1,0 +1,44 @@
+{
+  "name": "react-native_horizontal_calender",
+  "version": "1.0.0",
+  "author": "Shrey Jain",
+  "license": "MIT",
+  "description": "Horizontal calender for react native",
+  "main": "lib/component/Calender.js",
+  "types": "lib/component/Calender.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "lint": "eslint --ext '.js,.ts,.tsx' ."
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "moment",
+    "datepicker", 
+    "horizontal datepicker", 
+    "react date-picker",
+    "horizontal-calender",
+    "horizontal-datepicker",
+    "whatsapp",
+    "android horizontal datepicker",
+    "ios horizontal datepicker"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.18",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-native": "^0.72.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
