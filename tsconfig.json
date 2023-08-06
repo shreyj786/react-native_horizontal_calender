@@ -1,23 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
         "target": "es5",
-        "allowJs": true,
-        "checkJs": false,
-        "jsx": "react",
+        "module": "CommonJS",
+        "declaration": true,
         "outDir": "./lib",
-        "rootDir": "./src",
-        "removeComments": true,
-        "pretty": true,
-        "skipLibCheck": true,
         "strict": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "jsx": "react",
+        "skipLibCheck": true
+ 
     },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules", "**/__tests__/*"]
 }
