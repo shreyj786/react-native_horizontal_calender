@@ -1,7 +1,7 @@
 // Native Packages
-import * as React from 'react';
+import   React from 'react';
 import { FlatList } from 'react-native';
-import * as moment from 'moment';
+import    moment from 'moment';
 // Interfaces
 import { HorizontalCalenderProp } from './interfaces/CalenderProp';
 import { DateProp } from './interfaces/DateProp';

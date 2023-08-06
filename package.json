@@ -1,11 +1,11 @@
 {
   "name": "react-native_horizontal_calender",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Shrey Jain",
   "license": "MIT",
   "description": "Horizontal calender for react native",
-  "main": "lib/Calender.js",
-  "types": "lib/Calender.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",

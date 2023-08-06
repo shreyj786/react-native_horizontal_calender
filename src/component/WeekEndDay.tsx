@@ -1,7 +1,7 @@
+import React from "react";
 import { Text, TouchableOpacity } from "react-native";
 import { DayProp } from "../interfaces/DayProp";
-import { styles } from "../Calender.styles";
-import React from "react";
+import { styles } from "../index.styles";
 
 const WeekEndDay = (props: DayProp) => {
     return (
