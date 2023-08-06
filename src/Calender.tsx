@@ -14,7 +14,7 @@ import { DateFormats } from './utils/DateFormat';
 let currentNumberOfDays = 15;
 let daysDifference = 0;
 
-const CustomHorizontalCalender = (props: HorizontalCalenderProp) => {
+const HorizontalCalender = (props: HorizontalCalenderProp) => {
     const [selectedDate, selectedSelectedDate] =React. useState(props.selectedDate);
     const [dates, setDates] = React.useState<(moment.Moment | moment.Moment[])[]>([]);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -113,7 +113,7 @@ const CustomHorizontalCalender = (props: HorizontalCalenderProp) => {
 };
 
 // export default memo(CustomHorizontalCalender);
-export default CustomHorizontalCalender;
+export default HorizontalCalender;
 
 
 
