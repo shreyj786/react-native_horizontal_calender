@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity } from "react-native";
 import { DayProp } from "../interfaces/DayProp";
 import { styles } from "../Calender.styles";
+import React from "react";
 
 const SelectedDay = (props: DayProp) => {
     return (
