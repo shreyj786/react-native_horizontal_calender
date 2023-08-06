@@ -65,23 +65,23 @@ const HorizontalCalender = (props: HorizontalCalenderProp) => {
     const onDatePress = (date: any) => {
         selectedSelectedDate(date);
     };
+    const onPress = (item:Date) => {
+        props.onPressed();
+         onDatePress(item);
+     };
     const renderItem = ({ item, index }: DateProp) => {
         const day = moment(item).format(DateFormats.DD);
         const dayName = moment(item).format(DateFormats.DDD);
         const key = moment(item).unix();
         const isSelected = isSameDay(new Date(selectedDate), item, index);
-        const onPress = () => {
-           props.onPressed();
-            onDatePress(item);
-        };
-
+       
         if (isSelected) {
-            return <SelectedDay day={day} dayName={dayName} key={key} onPress={onPress} />;
+            return <SelectedDay day={day} dayName={dayName} key={key} onPress={() =>  onPress(item)} />;
         } else {
             if (dayName == 'Sun' || dayName == 'Sat') {
-                return <WeekEndDay day={day} dayName={dayName} key={key} onPress={onPress} />;
+                return <WeekEndDay day={day} dayName={dayName} key={key}onPress={() =>  onPress(item)}  />;
             } else {
-                return <UnselectedDay day={day} dayName={dayName} key={key} onPress={onPress} />;
+                return <UnselectedDay day={day} dayName={dayName} key={key}onPress={() =>  onPress(item)}  />;
             }
         }
     };
