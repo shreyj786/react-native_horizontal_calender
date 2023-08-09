@@ -1,6 +1,8 @@
 export interface HorizontalCalenderProp {
     onPressed: () => void;
-    selectedDate: string;
+    userSelectedDate: string;
      startingDate: string;
-    isSRPFirstPage: boolean;
+     numberOfDays: number; 
+     populateDatesOnLastDateSelect: boolean, 
+     horizontal?: boolean
 }
