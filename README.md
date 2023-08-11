@@ -35,7 +35,7 @@
 
 ## :dart:  About ##
 
-Describe your project
+React native component which renders list of dates.
 
 ## :dart: Demo ##
 
