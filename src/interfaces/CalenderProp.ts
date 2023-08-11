@@ -5,7 +5,8 @@ export interface HorizontalCalenderProp {
     userSelectedDate: Date;
      startingDate: Date;
      numberOfDays: number; 
-     populateDatesOnLastDateSelect: boolean, 
+     populateDatesOnLastDateSelect?: boolean, 
      horizontal?: boolean
-  }
+ 
+    }
   

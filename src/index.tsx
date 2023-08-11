@@ -16,7 +16,7 @@ const HorizontalCalender = ({
   onPressed,
   userSelectedDate,
   startingDate,
-  numberOfDays,
+  numberOfDays = 10,
   populateDatesOnLastDateSelect = true,
   horizontal = true
 }: HorizontalCalenderProp) => {

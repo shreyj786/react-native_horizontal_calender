@@ -1,6 +1,6 @@
 {
   "name": "react-native_horizontal_calender",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Shrey Jain",
   "license": "MIT",
   "description": "Horizontal calender for react native",
@@ -28,6 +28,10 @@
   "devDependencies": {
     "@types/react": "^18.2.18",
     "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shreyj786/react-native_horizontal_calender"
   },
   "dependencies": {
     "moment": "^2.29.4",
