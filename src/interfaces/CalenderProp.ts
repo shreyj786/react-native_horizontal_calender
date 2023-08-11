@@ -1,8 +1,11 @@
+type onPressType = (date: Date) => void;
+
 export interface HorizontalCalenderProp {
-    onPressed: () => void;
-    userSelectedDate: string;
-     startingDate: string;
+    onPressed: onPressType, 
+    userSelectedDate: Date;
+     startingDate: Date;
      numberOfDays: number; 
      populateDatesOnLastDateSelect: boolean, 
      horizontal?: boolean
-}
+  }
+  

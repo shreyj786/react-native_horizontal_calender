@@ -3,12 +3,12 @@ import React from 'react';
 import {FlatList, View} from 'react-native';
 import moment from 'moment';
 // Interfaces
-import {HorizontalCalenderProp} from './interfaces/CalenderProp';
 import {DateProp} from './interfaces/DateProp';
 import SelectedDay from './component/SelectedDay';
 import WeekEndDay from './component/WeekEndDay';
 import UnselectedDay from './component/UnselectedDay';
 import {DateFormats} from './utils/DateFormat';
+import { HorizontalCalenderProp } from './interfaces/CalenderProp';
 // Utils
 let daysDifference = 0;
 
@@ -22,13 +22,13 @@ const HorizontalCalender = ({
 }: HorizontalCalenderProp) => {
   const [selectedDate, selectedSelectedDate] = React.useState(userSelectedDate);
   const [dates, setDates] = React.useState<(Date[])>(
-    [],
+    []
   );
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const flatListRef = React.useRef<FlatList>(null);
   React.useEffect(() => {
     daysDifference =
-      moment(selectedDate).diff(new Date(), 'days') + numberOfDays; // Adding 10 so that we can load next 10 days as well
+      moment(selectedDate.toISOString()).diff(new Date(), 'days') + numberOfDays; // Adding 10 so that we can load next 10 days as well
     generateHorizontalCalendarDates(daysDifference);
   }, []);
   React.useEffect(() => {
@@ -41,10 +41,7 @@ const HorizontalCalender = ({
         });
       }, 100);
     }
-  }, [dates, selectedIndex, selectedDate]);
-  React.useEffect(() => {
-    selectedSelectedDate(userSelectedDate);
-  }, [userSelectedDate]);
+  }, [ selectedIndex, selectedDate]);
   // differnece between current and selected date from previous props
   const dateSubtractDays = (date: Date, days: number):Date => {
     return moment(date).add(days, 'days').toDate();
@@ -59,7 +56,7 @@ const HorizontalCalender = ({
   };
   // generates horizontal dates
   const generateHorizontalCalendarDates = (days: number) => {
-    const today = new Date(startingDate);
+    const today = startingDate;
     let result: Date[] = [];
 
     for (let i = 0; i < days; i++) {
@@ -67,13 +64,12 @@ const HorizontalCalender = ({
     }
     setDates(result);
   };
-  const onDatePress = (date: any) => {
-    selectedSelectedDate(date);
-  };
+  
   const onPress = (item: Date) => {
-    onPressed();
-    onDatePress(item);
+    selectedSelectedDate(item); 
+    onPressed(item)
   };
+ 
   const renderItem = ({item, index}: DateProp) => {
     const day = moment(item).format(DateFormats.DD);
     const dayName = moment(item).format(DateFormats.DDD);
@@ -86,7 +82,11 @@ const HorizontalCalender = ({
           day={day}
           dayName={dayName}
           key={key}
-          onPress={() => onPress(item)}
+          onPress={() => {
+            onPress(item)
+
+          }
+          }  
         />
       );
     } else {
@@ -96,7 +96,10 @@ const HorizontalCalender = ({
             day={day}
             dayName={dayName}
             key={key}
-            onPress={() => onPress(item)}
+            onPress={() => {
+              onPress(item)
+            }
+            }  
           />
         );
       } else {
@@ -105,7 +108,10 @@ const HorizontalCalender = ({
             day={day}
             dayName={dayName}
             key={key}
-            onPress={() => onPress(item)}
+            onPress={() => {
+              onPress(item)
+            }
+            }  
           />
         );
       }
