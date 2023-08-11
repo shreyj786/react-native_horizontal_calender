@@ -88,13 +88,3 @@ Supports both Android and iOS.
 | horizontal | boolean   | Yes      | true          | Show calender horizontal or not| 
 
 
-## :dart:  License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/shreyj786" target="_blank">Shrey Jain</a>
-
-&#xa0;
-
-<a href="#top">Back to top</a>
